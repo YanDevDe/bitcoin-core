@@ -775,10 +775,16 @@ var _default = {
   },
   walletLock: {
     category: 'wallet',
-    version: '>=0.1.0'
+    version: '>=0.1.0',
+    features: {
+      multiwallet: '>=0.17.0'
+    },
   },
   walletPassphrase: {
     category: 'wallet',
+    features: {
+      multiwallet: '>=0.17.0'
+    },
     obfuscate: {
       request: {
         default: params => (0, _lodash.set)([...params], '[0]', '******'),
@@ -789,6 +795,9 @@ var _default = {
   },
   walletPassphraseChange: {
     category: 'wallet',
+    features: {
+      multiwallet: '>=0.17.0'
+    },
     obfuscate: {
       request: {
         default: params => (0, _lodash.set)((0, _lodash.set)([...params], '[0]', '******'), '[1]', '******'),
