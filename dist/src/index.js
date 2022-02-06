@@ -159,7 +159,7 @@ class Client {
 
     if (isBatch) {
       multiwallet = _lodash.default.some(input, command => {
-        return _lodash.default.get(this.methods[command.method], 'features.multiwallet.supported', false) === true;
+        return _lodash.default.get(this.methods[command.method], 'features.multiwallet.supported', true) === true;
       });
       body = input.map((method, index) => this.requester.prepare({
         method: method.method,
@@ -171,7 +171,7 @@ class Client {
         parameters = parameters[0];
       }
 
-      multiwallet = _lodash.default.get(this.methods[input], 'features.multiwallet.supported', false) === true;
+      multiwallet = _lodash.default.get(this.methods[input], 'features.multiwallet.supported', true) === true;
       body = this.requester.prepare({
         method: input,
         parameters
