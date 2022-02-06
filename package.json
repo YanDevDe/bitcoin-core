@@ -103,5 +103,5 @@
     "transpile": "rm -rf dist/* && babel src --out-dir dist/src",
     "version": "npm run changelog --future-release=$npm_package_version && npm run transpile && git add -A CHANGELOG.md dist"
   },
-  "version": "2.2.1"
+  "version": "2.2.2"
 }
